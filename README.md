@@ -448,3 +448,8 @@ If you get the error: `Windows Subsystem for Linux has no installed distribution
 [Microsoft Documentation: Windows Subsystem for Linux]( https://docs.microsoft.com/en-us/windows/wsl/install-win10)  
 [Setting up a SSH Key with GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)  
 [Basic Linux Commands](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners)
+
+## Finishing touches
+gem update --system && gem install pry && gem install byebug && gem install nokogiri && gem install learn-co
+npm i yarn -g && npm i create-react-app -g && npm i json-server -g
+
