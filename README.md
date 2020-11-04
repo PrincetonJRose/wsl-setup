@@ -451,5 +451,6 @@ If you get the error: `Windows Subsystem for Linux has no installed distribution
 
 ## Finishing touches
 gem update --system && gem install pry && gem install byebug && gem install nokogiri && gem install learn-co
+
 npm i yarn -g && npm i create-react-app -g && npm i json-server -g
 
