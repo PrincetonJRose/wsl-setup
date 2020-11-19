@@ -187,8 +187,26 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   ```
   git config --global user.email "your_email@example.com"
   ```
+  
+  Next let's generate an SSH key for github:
+  ```
+  ssh-keygen
+  ```
+    - Be sure to leave all the fields blank
+  
+  Then we'll get our key so we can copy/paste it in github:
+  ```
+  cat ~/.ssh/id_rsa.pub
+  ```
+    - Copy everything up to your username
+
 
   You can either communicate with your remote repositories via HTTPS or SSH. If you want to use SSH (which means you will not have to authenticate with your GitHub username and password before each push) - [follow these instructions.](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+11.5) Next let's get some of the most useful gems we'll be using:
+    ```
+    gem install pry && gem install byebug && gem install nokogiri && gem install rails
+    ```
 
 12) Now we can get set up with the learn-co gem. This will allow you to use commands like `learn`, `learn submit`, and `learn open`.
 
@@ -215,13 +233,13 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   - First, install NVM:
 
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | zsh
     ```
   
   - Then, reload bash profile into current session:
 
     ```
-    source ~/.bashrc
+    source ~/.zshrc
     ```
   
   - Next, install NodeJS:
@@ -229,12 +247,12 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
     ```
     nvm install node
     ```
+    
+  - Now install some useful tools we'll need for our Javascript/React:
   
-  - Now, Ruby on Rails:
-
-    ```
-    gem install rails
-    ```
+   ```
+   npm i yarn -g && npm i create-react-app -g && npm i json-server -g
+   ```
 
 ## Choose your programming editor: VSCode
 
@@ -511,7 +529,4 @@ If you get the error: `Windows Subsystem for Linux has no installed distribution
 [Basic Linux Commands](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners)
 
 ## Finishing touches
-gem update --system && gem install pry && gem install byebug && gem install nokogiri && gem install rails && gem install learn-co
-
-npm i yarn -g && npm i create-react-app -g && npm i json-server -g
 
