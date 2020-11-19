@@ -71,32 +71,38 @@ My personal steps:
 If you're not already on WSL 2 then we're going to switch to WSL 2 using this guide here: https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
 
 Go ahead and install ZSH ( its just better than the normal bash ):
+
 ```
 sudo apt-get install zsh
 ```
 
 Next install Oh My ZSH  ( make sure to hit 'yes' when asked to make zsh your default shell!!! ):
+
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 Time to install Brew ( or at least linuxbrew since we aren't on mac ):
   - Make sure we update the terminal
+  
     ```
     sudo apt update
     ```
     
   - followed by:
+  
     ```
     sudo apt upgrade
     ```
     
   - Then install homebrew
+  
     ```
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
     ```
 
   - Add it to your path with the following commands
+  
    ```
    test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
    test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -105,11 +111,13 @@ Time to install Brew ( or at least linuxbrew since we aren't on mac ):
    ```
 
 Since we're already here we're going to go ahead and install Postgres using brew:
+
 ```
 brew install postgresql
 ```
 
 Once that's installed, if you ever want to start the server you'll need to use this command:
+
 ```
 pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
 ```
@@ -160,6 +168,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   ```
   
   - Next its good to update the system using this command:
+  
   ```
   gem update --system
   ```
@@ -188,22 +197,23 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   git config --global user.email "your_email@example.com"
   ```
   
-  Next let's generate an SSH key for github:
+  Next let's generate an SSH key for github ( be sure to leave all the fields blank!!! ):
+  
   ```
   ssh-keygen
   ```
-    - Be sure to leave all the fields blank
   
-  Then we'll get our key so we can copy/paste it in github:
+  Then we'll get our key so we can copy/paste it in github ( copy everything up to your username ):
+  
   ```
   cat ~/.ssh/id_rsa.pub
   ```
-    - Copy everything up to your username
 
 
   You can either communicate with your remote repositories via HTTPS or SSH. If you want to use SSH (which means you will not have to authenticate with your GitHub username and password before each push) - [follow these instructions.](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 11.5) Next let's get some of the most useful gems we'll be using:
+
     ```
     gem install pry && gem install byebug && gem install nokogiri && gem install rails
     ```
