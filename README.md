@@ -75,7 +75,7 @@ Go ahead and install ZSH ( its just better than the normal bash ):
 sudo apt-get install zsh
 ```
 
-Next install Oh My ZSH:
+Next install Oh My ZSH  ( make sure to hit 'yes' when asked to make zsh your default shell!!! ):
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
