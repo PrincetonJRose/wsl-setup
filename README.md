@@ -64,6 +64,49 @@ Note: if you get an error at this step, see FAQ below.
   sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev libpq-dev libgdbm-dev libncurses5-dev automake libtool bison gnupg postgresql postgresql-contrib
   ```
 
+
+
+My personal steps:
+
+If you're not onSwitch to WSL 2 following this guide here: https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
+
+Go ahead and install ZSH ( its just better than the normal bash ):
+```
+sudo apt-get install zsh
+```
+
+Next install Oh My ZSH:
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Time to install Brew ( or at least linuxbrew since we aren't on mac ):
+ - Make sure we update the terminal
+    ```
+    sudo apt update
+    ```
+  followed by:
+    ```
+    sudo apt upgrade
+    ```
+  - Then install homebrew
+  ```
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  ```
+
+   - Add it to your path with the following commands
+   ```
+   test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+   test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+   test -r ~/.zprofile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile
+   echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile
+   ```
+
+
+
+
+
+
 8) Install RVM by running:
 
   ```
