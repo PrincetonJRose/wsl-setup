@@ -164,7 +164,8 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   gem update --system
   ```
 
-( Step 10 is optional since bundler should be installed by default and covered by out gem update )
+( Step 10 is optional since bundler should be installed by default and covered by our gem update )
+
 10)  Let's install the bundler gem:  
 
   ```
