@@ -214,9 +214,9 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
 
 11.5) Next let's get some of the most useful gems we'll be using:
 
-    ```
-    gem install pry && gem install byebug && gem install nokogiri && gem install rails
-    ```
+   ```
+   gem install pry && gem install byebug && gem install nokogiri && gem install rails
+   ```
 
 12) Now we can get set up with the learn-co gem. This will allow you to use commands like `learn`, `learn submit`, and `learn open`.
 
