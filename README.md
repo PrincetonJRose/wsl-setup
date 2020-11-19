@@ -85,14 +85,16 @@ Time to install Brew ( or at least linuxbrew since we aren't on mac ):
     ```
     sudo apt update
     ```
-  followed by:
+    
+ - followed by:
     ```
     sudo apt upgrade
     ```
+    
   - Then install homebrew
-  ```
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  ```
+    ```
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+    ```
 
    - Add it to your path with the following commands
    ```
@@ -102,6 +104,15 @@ Time to install Brew ( or at least linuxbrew since we aren't on mac ):
    echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile
    ```
 
+Since we're already here we're going to go ahead and install Postgres using brew:
+```
+brew install postgresql
+```
+
+Once that's installed, if you ever want to start the server you'll need to use this command:
+```
+pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
+```
 
 
 
@@ -144,10 +155,16 @@ Time to install Brew ( or at least linuxbrew since we aren't on mac ):
 9)  Next, to set up a ruby version most compatible with Learn.co labs, we want to download ruby 2.6.1 and set it as our default:
 
   ```
-  rvm install 2.6.1
-  rvm use 2.6.1 --default
+  rvm install 2.7.2
+  rvm use 2.7.2 --default
+  ```
+  
+  - Next its good to update the system using this command:
+  ```
+  gem update --system
   ```
 
+( Step 10 is optional since bundler should be installed by default and covered by out gem update )
 10)  Let's install the bundler gem:  
 
   ```
