@@ -242,7 +242,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   - First, install NVM:
 
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | zsh
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | zsh
     ```
   
   - Then, reload bash profile into current session:
