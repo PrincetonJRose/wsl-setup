@@ -151,7 +151,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   Once you have successfully run either the `gpg` or the `gpg2` command above, run the following:
 
   ```
-  \curl -sSL https://get.rvm.io |zsh -s stable --ruby
+  \curl -sSL https://get.rvm.io | bash -s stable --ruby
   ```
   
   and finally
