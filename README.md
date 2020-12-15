@@ -163,8 +163,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
 9)  Next, to set up a ruby version most compatible with Learn.co labs, we want to download ruby 2.6.1 and set it as our default:
 
   ```
-  rvm install 2.7.2
-  rvm use 2.7.2 --default
+  rvm install 2.7.2 --default
   ```
   
   - Next its good to update the system using this command:
