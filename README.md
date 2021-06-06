@@ -151,7 +151,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   Once you have successfully run either the `gpg` or the `gpg2` command above, run the following:
 
   ```
-  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  \curl -sSL https://get.rvm.io | zsh -s stable --ruby
   ```
   
   and finally
@@ -163,7 +163,7 @@ pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
 9)  Next, to set up a ruby version most compatible with Learn.co labs, we want to download ruby 2.6.1 and set it as our default:
 
   ```
-  rvm install 2.7.2 --default
+  rvm install 3.0.1 --default
   ```
   
   - Next its good to update the system using this command:
